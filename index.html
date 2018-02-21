@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>The Limit Order Book</title>
+    <title>Other Investment Decision Rules</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <!-- <link rel="stylesheet" href="css/theme/black.css"> -->
@@ -29,7 +29,7 @@
       <div class="slides">
 	<section>
 	  <section data-background-image="./city_skyline.jpg">
-	    <h2>The Limit Order Book</h2>
+	    <h2>Other Investment Decision Rules</h2>
 	    <br>
 	    <br>
 	    <br>
@@ -38,7 +38,7 @@
 	    <br>
 	  </section>
 	  <section>
-	    <h2>The Limit Order Book</h2>
+	    <h2>Other Investment Decision Rules</h2>
 	    <br>
 	    <p> MATT BRIGIDA </p>
 	    <p> Associate Professor of Finance (SUNY Polytechnic Institute) & Financial Education Advisor, Milken Institute </p>
@@ -47,144 +47,88 @@
 
 
 	<section>
-	  <h3>The Limit Order Book</h3>
+	  <h3>Beyond NPV and IRR</h3>
+	  <p align="left">It is most common to use NPV and/or IRR to make investment decisions. Because of their wide use, they will be easily understood by any manager.</p>
 
-	  <p align="left">The <b class="fragment highlight-green">limit order book</b> is the list of orders (prices at which you can transact) for a given security.</p>
-	  <ul>
-	    <li>Depending on the security, these orders may be on one exchange, or aggregated across many exchanges.</li>
-	    <li>This presentation will give a basic description of the order book, and how your transactions will be handled by (and how they will affect) the book.</li>
-	    <li>You will transact in an order book if you trade stock, futures, options, and/or other securities.  However, in this presentation we'll use stock examples.</li>
-	  </ul>
+However, there are other decision rules you may be asked to use in particular situations or given certain managers. This presentation will cover these rules, which are:
+
+-  <b class="fragment highlight-current-blue">Payback</b> 
+			  
+-  <b class="fragment highlight-current-blue">Discounted Payback</b>
+			 
+-  <b class="fragment highlight-current-blue">Profitability Index</b>
+
+Note that we consider Modified IRR as a type of IRR, and cover it in its own presentation. 
+
 	</section>
 
-<section>
-<section>
-<h3>Order Book Description</h3>
-<p align="left">In <b class="fragment highlight-red">the slide below</b>, the plot on the right shows the full order book -- sell orders from \$11.38 to about \$12.50, and buy orders from \$11.36 down to about \$10.20.</p>
-<ul>
-  <li> We generally only show the book 5 or 10 levels deep, as in the graphic on the left, which shows the book 5 levels deep.</li>
-</ul>
-</section>
+	<section>
+	  <h3>Payback</h3>
+	  We choose some threshold value, which represents the maximum time we will allow for the project to 'pay us back'. We then calculate the point in time in which we expect to be paid back.
 
-<section data-background-image="./code_image.jpg">
-  <div class="stretch">
-    <iframe src="https://micfm.shinyapps.io/limit_order_book_app1/" height="100%" width="100%"></iframe>
-  </div>
-  <!-- <a href="https://micfm.shinyapps.io/markowitz_app1/" data-preview-link>Interact with Diversification</a> -->
-  <!-- <iframe width="100%" height="100%" src="https://www.w3schools.com"></iframe> -->
-</section>
-</section>
-
-<section>
-<h3>Example:</h3> 
-
-<p align="left">Reading the first 2 levels of the book:</p>
-
-<ul>
-<li> There are 400 shares being offered for sale at 11.38, and 1600 shares offered at 11.39.  This means, if we wish, we can buy shares at these prices.  </li>
-<li> Similarly there are 2700 shares being being bid for at 11.36, and 1100 shares being bid for at 11.35.  This means, if we wish, we can sell shares at these prices.  </li>  
-</ul>
-</section>
-
-<section>
-<h3>Inside Quotes</h3>
-
-<p align="left">The <b class="fragment highlight-green">inside quotes</b>, which are also known as the <b class="fragment highlight-green">Best Bid and Offer</b> or <b class="fragment highlight-green">BBO</b>, are the highest bid, and lowest ask, in the order book.</p>
-
-<ul>
-  <li>They are the prices at which the next market buy (with the best offer) or market sell (with the best bid) will transact.</li>
-  <li>In the above book the <b class="fragment highlight-green">inside quotes</b> are 11.36/11.38.</li>
-</ul>
-</section>
-
-<section>
-<h3>The Bid-Ask Spread</h3>
-
-<p align="left">In this case the bid/ask spread is \$11.36 - \$11.38 = \$0.02, or $$\ \frac{\$0.02}{\$11.38} = 0.1757\%$$</p>
-
-<ul>
-  <li>The bid/ask percentage spread measures the <b class="fragment highlight-red">cost to transact</b> in that security---the larger the spread, the larger the transaction costs.</li>
-</ul> 
-</section>
+<div class="decisionBox">*Decision Rule*: If expected payback time is less than the threshold we **accept**, otherwise we **reject**.</div>
+	</section>
 
 
 <section>
-<h3>The Order Book and Liquidity</h3>
+<h3>Calculating the Payback Point</h3> 
+Say a project has the following expected cash flows:
 
-<p align="left">The smaller the bid/ask spread, and the more limit orders in the book, the greater the security's <b class="fragment highlight-green">liquidity</b>.  </p>
+| Year | 0 | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|---|
+|Cash Flow ($) | -100,000 | 40,000 | 40,000 | 30,000 | 10,000 |
 
-<ul>
-  <li><b class="fragment highlight-green">Liquidity</b> is a measure of your ability to cheaply transact (buy or sell) a security without moving the inside quotes by much.</li>
-  <li>Sufficient liquidity is an integral component of a well-functioning market.</li>
-</ul> 
-</section>
+Then we expect the payback time to be
 
-
-<section>
-<h3>The Market Maker</h3>
-
-<p align="left">A <b class="fragment highlight-current-blue">market maker's</b> job is to maintain, at all times, bids and offers in the order book.  This provides liquidity to the market.</p>
-
-<ul>
-  <li>The <a href="https://www.sec.gov/answers/mktmaker.htm">market maker</a> attempts to earn the bid/ask spread---repeatedly buying at the bid and selling at the ask.</li>
-  <li>The order book is comprised of the market maker's limit orders, as well as limit orders entered by other investors and traders.  However, the market maker <b class="fragment highlight-red">must</b> maintain orders in the book, and other market participants do not have this requirement.</li>
-</ul>
-</section>
-
-
-<section>
-<h3>Entering a Market Order</h3>
-
-<p align="left">If you want to buy or sell a stock, one type of order you can enter is a <b class="fragment highlight-green">market order</b>.  This will buy or sell the stock at the best available price in the market at the time the order arrives.  With a market order, you are guaranteed that you will buy or sell; however, you are not sure of the price at which you will trade.</p>
 </section>
 
 <section>
-<ul>
-  <li>A <b class="fragment highlight-green">market buy</b> will buy at the lowest ask price.  If it buys all available shares at the lowest ask, the next ask above will become the new lowest ask, and that is where additional shares will be bought.</li>
-  <li>A <b class="fragment highlight-red">market sell</b> will sell at the highest bid price.  Similarly, if it sells all available shares at the highest bid, the next bid below will become the new highest bid, and that is where additional shares will be sold.</li>
-</ul>
+<h3>Benefits/Drawbacks of Payback</h3>
+
 </section>
 
 <section>
-  <p align="left">Use the app in the next slide to enter market orders and see the effect on the limit order book.  On the left is the original book, and the right shows the book after the order is executed.</p>
-</section>
+<h3>Discounted Payback</h3>
 
-<section data-background-image="./code_image.jpg">
-  <div class="stretch">
-    <iframe src="https://micfm.shinyapps.io/limit_order_book_app2/" height="100%" width="100%"></iframe>
-  </div>
-  <!-- <a href="https://micfm.shinyapps.io/markowitz_app1/" data-preview-link>Interact with Diversification</a> -->
-  <!-- <iframe width="100%" height="100%" src="https://www.w3schools.com"></iframe> -->
 </section>
-
 
 <section>
-<h3>Entering a Limit Order</h3>
-
-<p align="left">You can also buy or sell stock with a <b class="fragment highlight-green">limit order</b>.  In this type of order, you specify the highest/lowest price at which you will buy/sell.  With a limit order, you are guaranteed the price at which you will buy or sell (if the trade is executed); however, you are not guaranteed that you will actually trade.</p>
-
-<ul>
-  <li>Say you enter a limit order to buy shares at \$50.03. Your order will sit in the limit order book until a sell order executes against your trade at \$50.03.</li>
-  <li>Similarly, a limit sell will sit in the book until a buy order executes against your sell.</li>
-</ul>
-</section>
-
-
-<section>
-  <p align="left">What if I enter a limit order to buy at \$50.03 and the present ask is \$50.01?  Your broker will likely warn you, but if you enter the order it will immediately trigger, turn into a market order, and execute at \$50.01. A limit buy simply specifies the highest price at which you will trade---you will always get the best available price when transacting.</p>
-
-    <p align="left">Use the app in the next slide to enter limit orders and see the effect on the limit order book.  On the left is the original book, and the right shows the book after the order is executed.</p>
+<h3>Profitability Index</h3>
 
 </section>
 
 
-<section data-background-image="./code_image.jpg">
-  <div class="stretch">
-    <iframe src="https://micfm.shinyapps.io/limit_order_book_app3/" height="100%" width="100%"></iframe>
-  </div>
-  <!-- <a href="https://micfm.shinyapps.io/markowitz_app1/" data-preview-link>Interact with Diversification</a> -->
-  <!-- <iframe width="100%" height="100%" src="https://www.w3schools.com"></iframe> -->
-</section>
+<!-- Insert App -->
+<!-- <section data-background-image="./code_image.jpg"> -->
+<!--   <div class="stretch"> -->
+<!--     <iframe src="https://micfm.shinyapps.io/limit_order_book_app1/" height="100%" width="100%"></iframe> -->
+<!--   </div> -->
+<!-- </section> -->
+<!-- </section> -->
+
+
+
+<!-- Inserting App -->
+<!-- <section data-background-image="./code_image.jpg"> -->
+<!--   <div class="stretch"> -->
+<!--     <iframe src="https://micfm.shinyapps.io/limit_order_book_app3/" height="100%" width="100%"></iframe> -->
+<!--   </div> -->
+<!-- </section> -->
+
+
+
+
+<!-- <p align="left">The <b class="fragment highlight-green">inside quotes</b>, which are also known as the <b class="fragment highlight-green">Best Bid and Offer</b> or <b class="fragment highlight-green">BBO</b>, are the highest bid, and lowest ask, in the order book.</p> -->
+
+<!-- <ul> -->
+<!--   <li>They are the prices at which the next market buy (with the best offer) or market sell (with the best bid) will transact.</li> -->
+<!--   <li>In the above book the <b class="fragment highlight-green">inside quotes</b> are 11.36/11.38.</li> -->
+<!-- </ul> -->
+
+
+
+
+
 
 <section>
 <h3>Credits and Collaboration</h3>
