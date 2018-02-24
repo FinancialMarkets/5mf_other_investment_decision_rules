@@ -50,41 +50,65 @@
 	  <h3>Beyond NPV and IRR</h3>
 	  <p align="left">It is most common to use NPV and/or IRR to make investment decisions. Because of their wide use, they will be easily understood by any manager.</p>
 
-However, there are other decision rules you may be asked to use in particular situations or given certain managers. This presentation will cover these rules, which are:
-
--  <b class="fragment highlight-current-blue">Payback</b> 
-			  
--  <b class="fragment highlight-current-blue">Discounted Payback</b>
-			 
--  <b class="fragment highlight-current-blue">Profitability Index</b>
-
-Note that we consider Modified IRR as a type of IRR, and cover it in its own presentation. 
+	  <p align="left">However, there are other decision rules you may be asked to use in particular situations or given certain managers. This presentation will cover these rules, which are:</p>
+	</section>
+	
+	<section>
+	  <ul>
+	    <li><b class="fragment highlight-current-blue">Payback</b> </li>
+	    <li><b class="fragment highlight-current-blue">Discounted Payback</b></li>
+	    <li><b class="fragment highlight-current-blue">Profitability Index</b></li>
+	  </ul>
+<br>
+<br>
+	  <p align="left" class="fragment fade-up">Note that we consider Modified IRR as a type of IRR, and cover it in its own presentation. </p>
 
 	</section>
 
 	<section>
 	  <h3>Payback</h3>
-	  We choose some threshold value, which represents the maximum time we will allow for the project to 'pay us back'. We then calculate the point in time in which we expect to be paid back.
+	  <p align="left">We choose some <b class="fragment highlight-green">threshold</b> value, which represents the maximum time we will allow for the project to 'pay us back'. We then calculate the point in time in which we expect to be paid back.</p>
 
-<div class="decisionBox">*Decision Rule*: If expected payback time is less than the threshold we **accept**, otherwise we **reject**.</div>
+	  <h5>Decision Rule</h5>
+	  <pre><code  data-trim data-noescape>If expected payback time < threshold, then "accept", else "reject".</code></pre>								 
 	</section>
 
 
-<section>
-<h3>Calculating the Payback Point</h3> 
-Say a project has the following expected cash flows:
+	<section data-markdown>
+	  <textarea data-template>
+	    ## Calculating the Payback Point
+	  
+	    <p align="left">Say a project has the following expected cash flows (CF):</p>
 
 | Year | 0 | 1 | 2 | 3 | 4 |
 |---|---|---|---|---|---|
-|Cash Flow ($) | -100,000 | 40,000 | 40,000 | 30,000 | 10,000 |
+|CF($) | -100,000 | 40,000 | 40,000 | 30,000 | 10,000 |
 
-Then we expect the payback time to be
+	    <p align="left">Then we expect the payback time to be $2 + \frac{20000}{30000} = 2.67\ years$.</p>
+</textarea>
+	</section>
 
+	<section>
+<h3>Benefits of Payback</h3>
+<ul>
+  <li>Simple to implement.</li>
+  <li>Doesn't require a discount rate.</li>
+</ul>
 </section>
 
 <section>
-<h3>Benefits/Drawbacks of Payback</h3>
+<h3>Problems with Payback</h3>
+<ul>
+  <li>Threshold value is arbitrary.</li>
+  <li>Doesn't consider how much is paid after the payback point.</li>
+  <li>Ignores the time-value of money.</li>
+  <li>Does not attempt to maximize shareholder wealth!</li>
+</ul>
+</section>
 
+<section>
+  <h3>Should you ever use payback?</h3>
+  <p align="left">It makes sense to use payback for <b class="fragment highlight-red">very small decisions</b>, which are often made by departments with little financial training.</p>  
 </section>
 
 <section>
