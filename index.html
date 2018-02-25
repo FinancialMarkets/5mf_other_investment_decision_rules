@@ -137,7 +137,7 @@
 
 		<section>
 <h3>Benefits of Discounted Payback</h3>
-<p align="left">Includes a discount which incorporates both:</p>
+<p align="left">Includes a discount rate which incorporates both:</p>
 <ul>
   <li>The time-value of money.</li>
   <li>The risk inherent in the project's cash flows.</li>
@@ -160,10 +160,47 @@
 
 
 <section>
-<h3>Profitability Index</h3>
+  <h3>Profitability Index</h3>
 
+  <p align-"left">This is defined as the ratio of the sum of the discounted cash flows, to the absolute value of the cost of the project.</p>
+  <pre><code  data-trim data-noescape>If the Profitability Index > 1 then "accept", else "reject".</code></pre>
 </section>
 
+	<section data-markdown>
+	  <textarea data-template>
+	    ## Calculating the Profitability Index
+	  
+	    <p align="left">Say a project has the following expected cash flows (CF), and a 10% discount rate:</p>
+
+| Year | 0 | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|---|
+	    |CF($) | -100,000 | 40,000 | 40,000 | 30,000 | 30,000 |
+	    | DCF($) | -100,000 | 36363.64 | 33057.85 | 22539.44 | 20490.40 |
+
+	    <p align="left">Then the Profitability Index is: $\frac{112,451.30}{100,000} = 1.12\ years$, and we would accept.</p>
+</textarea>
+	</section>
+
+			<section>
+<h3>Benefits of The Profitability Index</h3>
+<ul>
+  <li>Includes a risk-appropriate discount rate.</li>
+  <li>Includes all cash flows.</li>
+  <li>Will give the same accept/reject decision as NPV.</li>
+</ul>
+</section>
+
+<section>
+<h3>Problems with The Profitability Index</h3>
+<ul>
+  <li>Same level of difficulty to calculate as NPV.</li>
+  <li>Loses the scale of the project, so can't be used to rank mutually exclusive projects.</li>
+</ul>
+</section>
+
+<section>
+  <h3>Interactive App</h3>
+</section>
 
 <!-- Insert App -->
 <!-- <section data-background-image="./code_image.jpg"> -->
