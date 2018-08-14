@@ -1,1 +1,1 @@
-[The presentation is here](https://financialmarkets.github.io/other_investment_decision_rules/)
+[The presentation is here](https://financialmarkets.github.io/5mf_other_investment_decision_rules/)
